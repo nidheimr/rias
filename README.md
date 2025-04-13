@@ -12,7 +12,7 @@ Its also wise to include Rias into all files that use stdlib allocation function
 By default, Rias hijacks the main function and the stdlib memory allocation functions then dumps all leaks at the end of the program to stdout. To disable any of these features define the following:
 - `RIAS_DONT_HIJACK_MAIN` -> you must manually call `rias_begin()` and `rias_end()` at the start and end of your main function respectively.
 - `RIAS_DONT_WRAP_STDLIB` -> you must manually call `rias_<allocation function>()` and provide arguments that are usually provided by macros.
-- `RIAS_DONT_DUMP_ON_EXIT` -> you must manually call `rias_end()` when you want to dump all detected leaks.
+- `RIAS_DONT_DUMP_ON_EXIT` -> you must manually call `rias_dump()` when you want to dump all detected leaks.
 
 ## Quirks
 
