@@ -5,6 +5,8 @@
 #include <rias.h>
 #include <stdlib.h>
 
+#include "test.h"
+
 int main(int argc, char* argv[])
 {
     // malloc handled
@@ -30,5 +32,11 @@ int main(int argc, char* argv[])
     int* realloc_unhandled = malloc(sizeof(int));
     realloc_unhandled = realloc(realloc_unhandled, sizeof(int));
 
+    // multi file handled
+    properly_handled();
+
+    // multi file unhandled
+    purposely_leaked();
+    
     return 0;
 }

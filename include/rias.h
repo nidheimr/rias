@@ -212,6 +212,7 @@ void rias_free(void* ptr)
 //
 
 #ifndef RIAS_DONT_HIJACK_MAIN
+#ifdef RIAS_IMPLEMENTATION
 
 int main(int argc, char* argv[])
 {
@@ -222,6 +223,7 @@ int main(int argc, char* argv[])
 
 #define main rias_main
 
+#endif
 #endif
 
 //
