@@ -6,13 +6,13 @@ Rias is a header only library that tracks allocations to help identify unhandled
 
 ## Usage
 
-Rias is entirely one header file. To use it, you must simply include the header file into the file with your main function and define 'RIAS_IMPLEMENTATION'. Its also wise to include Rias into all files
+Rias is entirely one header file. To use it, you must simply include the header file into the file with your main function and define RIAS_IMPLEMENTATION. Its also wise to include Rias into all files
 that use stdlib allocation functions but do not define RIAS_IMPLEMENTATION again.
 
 By default, Rias hijacks the main function and the stdlib memory allocation functions then dumps all leaks at the end of the program to stdout. To disable any of these features define the following:
-- 'RIAS_DONT_HIJACK_MAIN'
-- 'RIAS_DONT_WRAP_STDLIB'
-- 'RIAS_DONT_DUMP_ON_EXIT'
+- RIAS_DONT_HIJACK_MAIN
+- RIAS_DONT_WRAP_STDLIB
+- RIAS_DONT_DUMP_ON_EXIT
 
 ## Building (the test executable)
 
