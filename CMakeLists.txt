@@ -15,7 +15,7 @@ file(GLOB_RECURSE test_files CONFIGURE_DEPENDS tests/*.c)
 add_executable(tests ${test_files})
 
 target_include_directories(tests PRIVATE
-    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 set_target_properties(tests PROPERTIES
